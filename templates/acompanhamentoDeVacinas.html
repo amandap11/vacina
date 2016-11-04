@@ -1,0 +1,28 @@
+<ion-view title="Acompanhamento de Vacinas" id="page2" style="background-color:#90CFEE;">
+  <ion-content padding="true" class="has-header">
+    <div id="acompanhamentoDeVacinas-container1">
+      <div class="item item-body" id="acompanhamentoDeVacinas-list-item-container1">
+        <div id="acompanhamentoDeVacinas-markdown2">
+          <p style="margin-top:0px;color:#000000;">Vacinas a Aplicar:</p>
+        </div>
+        <ion-list id="acompanhamentoDeVacinas-list5">
+          <ion-item ng-repeat="vacina in vacinasATomar" ng-click="detalhesVacina(vacina)">
+            Vacina: {{vacina.nome}} <br/>
+			Data da Próxima Dose: {{vacina.dataMarcada}}
+          </ion-item>
+        </ion-list>
+      </div>
+      <div class="item item-body" id="acompanhamentoDeVacinas-list-item-container3">
+        <div id="acompanhamentoDeVacinas-markdown5">
+          <p style="margin-top:0px;color:#000000;">Vacinas Aplicadas:</p>
+        </div>
+        <ion-list id="acompanhamentoDeVacinas-list6">
+          <ion-item ng-repeat="vacina in vacinasTomadas">
+            Vacina: {{vacina.nome}} <br/>
+			Data da Dose Aplicada: {{vacina.dataAplicada}}
+          </ion-item>
+        </ion-list>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
